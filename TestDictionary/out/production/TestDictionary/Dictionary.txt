@@ -1,0 +1,10 @@
+Me	Tôi
+You	Bạn
+Professor	Giáo sư
+House	Ngôi nhà
+Melon	Quả dưa hấu
+Youth	Tuổi trẻ
+Profile	Hồ sơ
+Proof	Bằng chứng
+Home	Mái ấm
+Hole	Hố, lỗ
