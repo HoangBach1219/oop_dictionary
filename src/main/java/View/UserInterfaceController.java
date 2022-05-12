@@ -1,5 +1,7 @@
-package Controller;
-import View.*;
+package View;
+import Controller.TheFavorite;
+import Controller.TheVoice;
+import Controller.UserInterface;
 
 import Model.*;
 import com.jfoenix.controls.*;
