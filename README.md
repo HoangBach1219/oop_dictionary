@@ -3,7 +3,7 @@
 
 ### Introduction
 
-This is a colorful Dictionary made for the OOP projects by:
+This is a colorful Dictionary made for the OOP project by:
 - 19020093 Hoang Huu Bach
 - 19021359 Kieu Thai Son
 - 19020104 Nguyen Ngoc 
