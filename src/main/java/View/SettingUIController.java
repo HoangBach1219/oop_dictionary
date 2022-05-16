@@ -52,7 +52,7 @@ public class SettingUIController {
         backgroundArt.setImage(image);
 
         themePicker.setStyle("-fx-font-size: 18px;");
-        themePicker.setPromptText(themeList.get(userInterface.getTheme()-1));
+        themePicker.setPromptText(themeList.get(userInterface.getThemeNumber()-1));
         themePicker.setItems(themeList);
         themePicker.valueProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == "Overflow")          themeChange(1);
@@ -72,7 +72,7 @@ public class SettingUIController {
     }
 
     private void themeChange(int a){
-        this.userInterface.setTheme(a);
+        this.userInterface.setThemeNumber(a);
         Image newImage = new Image(this.userInterface.getThemeBackgroundURL());
         backgroundArt.setImage(newImage);
         System.out.println("changed to" + this.userInterface.getThemeBackgroundURL());

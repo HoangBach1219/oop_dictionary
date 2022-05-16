@@ -2,6 +2,8 @@ package Controller;
 
 import Model.Dictionary;
 import Model.DictionarySearcher;
+import View.FavoriteUIController;
+import View.SettingUIController;
 import View.TranslateUIController;
 import View.UserInterfaceController;
 import javafx.application.Application;
@@ -29,14 +31,22 @@ public class UserInterface extends Application {
         this.primaryStage = primaryStage;
         primaryStage.setTitle("Dictionary");
         setThemeNumber(1);
-        primaryStage.show();
+        initDictLayout();
+        this.primaryStage.setResizable(false);
     }
+
+    @Override
+    public void stop() throws EngineException {
+        System.out.println("Stage is closing");
+        Dictionary.appendAddedWordToFile();
+        DictionarySearcher.executor.shutdown();
+        controller.theVoiceTerminate();
+    }
+
 
     public void setThemeNumber(int a) {
         themeNumber = a;
-        themeBackgroundURL = getClass().getClassLoader().getResource(
-                "D:/UETLearningDocs/Dictionary/src/main/resources/background/background"
-                        + a + ".png").toString();
+        themeBackgroundURL = getClass().getClassLoader().getResource("background/background" + a + ".png").toString();
         System.out.println("theme is now " + themeNumber);
         System.out.println("theme background set to " + themeBackgroundURL);
     }
@@ -71,14 +81,6 @@ public class UserInterface extends Application {
 
     }
 
-    @Override
-    public void stop() throws EngineException {
-        System.out.println("Stage is closing");
-        Dictionary.appendAddedWordToFile();
-        DictionarySearcher.executor.shutdown();
-        controller.theVoiceTerminate();
-    }
-
     public void initTranLayout() {
         try {
             // Load root layout from fxml file.
@@ -98,6 +100,11 @@ public class UserInterface extends Application {
         }
     }
 
+    public void initTranLayout(String input){
+        setTranslateRequest(input);
+        initTranLayout();
+    }
+
 
     /**
      * TranslateAPI setup
@@ -115,7 +122,47 @@ public class UserInterface extends Application {
         translateRequest = null;
     }
 
+    public void initSettLayout(){
+        try{
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(UserInterface.class.getResource("/settingUI.fxml"));
+            Parent root = loader.load();
+            settScene = new Scene(root, 1000, 768);
+            settScene.getStylesheets().add(getClass().getClassLoader().getResource("certainUIStyle.css").toString());
+            primaryStage.setScene(settScene);
+            primaryStage.show();
 
+            SettingUIController controller = loader.getController();
+            controller.setUserInterface(this);
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
+
+    public void initFavLayout(){
+        try{
+            // Load root layout from fxml file.
+            FXMLLoader loader = new FXMLLoader();
+            loader.setLocation(UserInterface.class.getResource("/favoriteUI.fxml"));
+            Parent root = loader.load();
+            favScene = new Scene(root, 1000, 768);
+
+            favScene.getStylesheets().add(getClass().getClassLoader().getResource("certainUIStyle.css").toString());
+            //dictScene.getStylesheets().add(getClass().getClassLoader().getResource("certainUIStyle.css").toString());
+            primaryStage.setScene(favScene);
+            primaryStage.show();
+
+            FavoriteUIController controller = loader.getController();
+            controller.setUserInterface(this);
+
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+
+    }
 
     public static String getThemeBackgroundURL() {
         return themeBackgroundURL;

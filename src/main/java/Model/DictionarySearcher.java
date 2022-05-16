@@ -198,11 +198,4 @@ public class DictionarySearcher {
         }
     }
 
-//    public static void main(String[] args) {
-//        DictionarySearcher.apiFetcher fetcher = new apiFetcher("One");
-//        Future<String> temp = DictionarySearcher.executor.submit(fetcher);
-//        DictionarySearcher.renderWaiter renderWaiter = new renderWaiter(temp);
-//        DictionarySearcher.executor.submit(renderWaiter);
-//        DictionarySearcher.executor.shutdown();
-//    }
 }

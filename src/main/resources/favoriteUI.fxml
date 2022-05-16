@@ -13,7 +13,7 @@
 <?import javafx.scene.text.Text?>
 <?import javafx.scene.web.WebView?>
 
-<AnchorPane maxHeight="768" maxWidth="1000" minHeight="768" minWidth="1000" prefHeight="768.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DictionaryApp.FavoriteUIController">
+<AnchorPane maxHeight="768" maxWidth="1000" minHeight="768" minWidth="1000" prefHeight="768.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="View.FavoriteUIController">
    <children>
       <ImageView fx:id="backgroundArt" fitHeight="768.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true" AnchorPane.topAnchor="0.0">
          <image>
@@ -43,7 +43,7 @@
                   <Insets left="1.0" top="1.0" />
                </padding>
             </JFXButton>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="34.0" layoutY="44.0" opacity="0.51" strokeType="OUTSIDE" strokeWidth="0.0" text="Koyomia Dictionary" wrappingWidth="320.12304616346955">
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="34.0" layoutY="44.0" opacity="0.51" strokeType="OUTSIDE" strokeWidth="0.0" text="Dictionary" wrappingWidth="320.12304616346955">
                <font>
                   <Font name="Arial Bold" size="20.0" />
                </font>
@@ -83,7 +83,7 @@
                   <Insets bottom="7.0" left="7.0" right="7.0" top="7.0" />
                </padding>
             </ListView>
-            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="594.0" opacity="0.51" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Dictionary Database - Koyomia Dictionary 1.1" wrappingWidth="707.9999893903732">
+            <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="594.0" opacity="0.51" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Dictionary Database - Dictionary 1.1" wrappingWidth="707.9999893903732">
                <font>
                   <Font name="SF Pro Rounded Semibold" size="14.0" />
                </font>
