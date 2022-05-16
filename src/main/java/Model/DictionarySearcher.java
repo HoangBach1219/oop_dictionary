@@ -182,13 +182,13 @@ public class DictionarySearcher {
         DictionarySearcher.executor.submit(renderWaiter);
     }
 
-    public static String TransResult(String input, TextInputControl outArea) throws IOException {
-        String res = GoogleTranslate.translate("vi", input);
-        Future<String> resultWaiter = DictionarySearcher.executor.submit(res);
-        renderWaiter renderWaiter = new renderWaiter(resultWaiter, outArea);
-        DictionarySearcher.executor.submit(renderWaiter);
-        return res;
-    }
+//    public static String TransResult(String input, TextInputControl outArea) throws IOException {
+//        String res = GoogleTranslate.translate("vi", input);
+//        Future<String> resultWaiter = DictionarySearcher.executor.submit(res);
+//        renderWaiter renderWaiter = new renderWaiter(resultWaiter, outArea);
+//        DictionarySearcher.executor.submit(renderWaiter);
+//        return res;
+//    }
 
     /**
      * Update wordmap after delete a word in database.
