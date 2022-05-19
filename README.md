@@ -6,7 +6,7 @@
 This is a colorful Dictionary made for the OOP project by:
 - 19020093 Hoang Huu Bach
 - 19021359 Kieu Thai Son
-- 19020104 Nguyen Ngoc 
+- 19021259 Nguyen Truong Giang 
 ## Features
 - Beautiful UI with 6 themes.
 - All dictionaries super quick search (English->Vietnamese & Vietnamese->English available).
