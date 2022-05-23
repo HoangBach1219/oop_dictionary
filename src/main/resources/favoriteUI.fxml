@@ -85,7 +85,7 @@
             </ListView>
             <Text fill="WHITE" fontSmoothingType="LCD" layoutX="14.0" layoutY="594.0" opacity="0.51" strokeType="OUTSIDE" strokeWidth="0.0" text="Apple Dictionary Database - Dictionary 1.1" wrappingWidth="707.9999893903732">
                <font>
-                  <Font name="SF Pro Rounded Semibold" size="14.0" />
+                  <Font name="SF Pro Rounded Semi-bold" size="14.0" />
                </font>
             </Text>
             <Label fx:id="certainWordTitle" layoutX="293.0" layoutY="427.0" prefHeight="0.0" prefWidth="0.0" text="word name" textFill="WHITE">

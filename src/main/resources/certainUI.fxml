@@ -110,7 +110,7 @@
                   <Font name="Tahoma" size="34.0" />
                </font>
             </Label>
-            <Label fx:id="StartupNote" layoutX="429.0" layoutY="278.0" prefHeight="26.0" prefWidth="498.0" text="Type a word to look up in the Dicitonary." textFill="#838383" wrapText="true">
+            <Label fx:id="StartupNote" layoutX="429.0" layoutY="278.0" prefHeight="26.0" prefWidth="498.0" text="Type a word to look up in the Dictionary." textFill="#838383" wrapText="true">
                <font>
                   <Font size="20.0" />
                </font>

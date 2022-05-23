@@ -138,7 +138,7 @@ public class DictionarySearcher {
         private String getRes(String text) throws IOException {
             StringBuffer result = new StringBuffer();
             text = URLEncoder.encode(text, StandardCharsets.UTF_8.toString());
-            URL url = new URL("https://bach-api.herokuapp.com/translate?text=" + text);
+            URL url = new URL("https://https://translate.google.com.vn/?sl=en&tl=vi&"+  text + "=alo&op=translate" );
             URLConnection yc = url.openConnection();
             BufferedReader in = new BufferedReader(
                     new InputStreamReader(
