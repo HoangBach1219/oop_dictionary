@@ -40,13 +40,14 @@ public class DictionaryManagement {
         }
     }
 
-    public void deleteWord(final ArrayList<Word> dictionary) {
+    public void deleteWord(ArrayList<Word> dictionary) {
         String word = new String();
         Scanner sc = new Scanner(System.in);
         word = sc.nextLine();
         for (Word looker : dictionary) {
             if (looker.getWord_target().equals(word)){
                 dictionary.remove(looker);
+                System.out.println(dictionary);
                 break;
             }
             break;

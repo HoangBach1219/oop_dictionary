@@ -15,7 +15,15 @@ public class TheVoice {
     Synthesizer synthesizer;
     Voice voice;
 
-
+    /**
+     * https://stackoverflow.com/questions/12684627/freetts-unable-to-find-any-voice
+     * @param voiceName
+     * @throws EngineException
+     * @throws AudioException
+     * @throws EngineStateError
+     * @throws PropertyVetoException
+     * @throws PropertyVetoException
+     */
     public void init(String voiceName)
             throws EngineException, AudioException, EngineStateError,
             PropertyVetoException, PropertyVetoException {

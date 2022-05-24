@@ -37,7 +37,7 @@ public class SettingUIController {
     @FXML
     private JFXComboBox<String> themePicker;
 
-    private ObservableList<String> themeList = FXCollections.observableArrayList("Overflow","Lipton","ULIS","DARK 100","Lime", "Kawaii");
+    private ObservableList<String> themeList = FXCollections.observableArrayList("Overflow","Lipton","Sky Blue","DARK 100","Lime", "Kawaii");
 
     private long previousPressedTime = System.currentTimeMillis();
 
@@ -57,7 +57,7 @@ public class SettingUIController {
         themePicker.valueProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == "Overflow")          themeChange(1);
             else if (newValue == "Lipton")       themeChange(2);
-            else if (newValue == "ULIS")         themeChange(3);
+            else if (newValue == "Sky Blue")         themeChange(3);
             else if (newValue == "DARK 100")     themeChange(4);
             else if (newValue == "Kawaii")         themeChange(5);
             else if (newValue == "Lime")         themeChange(6);
