@@ -17,7 +17,7 @@ This is a colorful Dictionary made for the OOP project by:
 
 ## Configuration
 - JDK 1.8
-- Unit 4.12
+- JUnit 4.12
 - JFoenix 8.0.10
 - Json build 20180813
 - SQLite 3.32.3-2
